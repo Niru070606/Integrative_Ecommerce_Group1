@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Budget Laptop</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/product_images.css') }}"
+    />
+  </head>
+
+  <body>
+    <div>
+      <nav>
+        <h3 class="brandName">DiwaTech</h3>
+        <ul>
+          <li><a href="{{ url_for('product') }}">Back</a></li>
+          <li><a href="{{ url_for('deals') }}">New Arrivals</a></li>
+          <li><a href="{{ url_for('main') }}">About</a></li>
+          <li><a href="{{ url_for('contact') }}">Help/Support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section>
+      <div></div>
+      <img
+        src="{{ url_for('static', filename='PRODUCT_IMAGES/budgetlaptop.jpg') }}"
+        alt="Student Budget Laptop"
+      />
+      <div class="specs">
+        <div>
+          <h1>STUDENT BUDGET LAPTOP</h1>
+        </div>
+        <h2>Specifications</h2>
+
+        <div class="spec-item">
+          <span class="label">GPU:</span>
+          <span class="value"
+            >Integrated graphics (Intel Iris Xe / AMD Radeon)</span
+          >
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Architecture:</span>
+          <span class="value">Ada Lovelace</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">CPU:</span>
+          <span class="value">Intel Core i3 (12th gen or newer)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">RAM:</span>
+          <span class="value">8GB RAM</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Storage:</span>
+          <span class="value">256GB SSD</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Display:</span>
+          <span class="value">Full HD (1920×1080) minimum</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Refresh Rate:</span>
+          <span class="value">N/A</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Cooling:</span>
+          <span class="value">N/A</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Battery:</span>
+          <span class="value">10 – 15 hours (depends on usage)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Ports:</span>
+          <span class="value">Regular ports</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">OS:</span>
+          <span class="value">Windows 10</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

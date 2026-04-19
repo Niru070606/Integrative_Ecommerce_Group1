@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    
+ background: #020617;
+  color: white;
+  box-shadow: inset 0 0 50px rgba(255, 0, 0, 0.3);
+}
+
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.8);
+    padding: 15px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #00f7ff;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+.navBar h1 {
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+.navBar nav {
+    display: flex;
+    gap: 25px;
+}
+
+.navBar nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navBar nav a:hover {
+    color: #00f7ff;
+    text-shadow: 0 0 10px #00f7ff;
+}
+
+
+.deals {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.deals h1 {
+    font-size: 3rem;
+    color: white;
+    
+}
+
+.deals p {
+    color: #94a3b8;
+    margin-bottom: 30px;
+}
+
+
+.deals-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.deal-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    width: 250px;
+    box-shadow: 0 0 15px #ff00ff;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.deal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00f7ff;
+}
+
+
+.old-price {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+
+.new-price {
+    color: #00f7ff;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+.deal-card button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    background: #00f7ff;
+    color: black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.deal-card button:hover {
+    background: #00bcd4;
+    box-shadow: 0 0 10px #00f7ff;
+}
+
+@media (max-width: 768px) {
+    .deals-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

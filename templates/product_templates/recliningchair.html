@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reclining Comfort Chair</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/product_images.css') }}"
+    />
+  </head>
+
+  <body>
+    <div>
+      <nav>
+        <h3 class="brandName">DiwaTech</h3>
+        <ul>
+          <li><a href="{{ url_for('product') }}">Back</a></li>
+          <li><a href="{{ url_for('deals') }}">New Arrivals</a></li>
+          <li><a href="{{ url_for('main') }}">About</a></li>
+          <li><a href="{{ url_for('contact') }}">Help/Support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section>
+      <div></div>
+      <img
+        src="{{ url_for('static', filename='PRODUCT_IMAGES/ergonomicchair.jpg') }}"
+        alt="Gaming "
+      />
+      <div class="specs">
+        <div>
+          <h1>RECLINING COMFORT CHAIR</h1>
+        </div>
+        <h2>Specifications</h2>
+
+        <div class="spec-item">
+          <span class="label">Recline Mechanism</span>
+          <span class="value">Premium models: up to 150°–170°</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Footrest System</span>
+          <span class="value">Full leg support (calf to ankle coverage)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Ergonomic Support Features</span>
+          <span class="value"
+            >Contoured seat design (reduces pressure points)</span
+          >
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Cushioning System</span>
+          <span class="value"
+            >Firmness: medium-soft balance (not too soft to avoid sinking)</span
+          >
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Frame & Build Quality</span>
+          <span class="value"
+            >Base: reinforced metal or heavy-duty wood frame Weight
+            capacity:</span
+          >
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Backrest Design</span>
+          <span class="value"
+            >Tilt-follow mechanism (back moves smoothly with body)</span
+          >
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Material Options</span>
+          <span class="value">PU leather (common, stylish, easy to clean)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Movement Features</span>
+          <span class="value">360° swivel base (optional in some models)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Size & Space Requirements</span>
+          <span class="value"
+            >Clearance needed behind chair: 20–50 cm (depends on recline
+            type)</span
+          >
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>144hz Gaming Monitor</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/product_images.css') }}"
+    />
+  </head>
+
+  <body>
+    <div>
+      <nav>
+        <h3 class="brandName">DiwaTech</h3>
+        <ul>
+          <li><a href="{{ url_for('product') }}">Back</a></li>
+          <li><a href="{{ url_for('deals') }}">New Arrivals</a></li>
+          <li><a href="{{ url_for('main') }}">About</a></li>
+          <li><a href="{{ url_for('contact') }}">Help/Support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section>
+      <div></div>
+      <img
+        src="{{ url_for('static', filename='PRODUCT_IMAGES/rgbmusepad.webp') }}"
+        alt="Gaming "
+      />
+      <div class="specs">
+        <div>
+          <h1>RGB MOUSE PAD</h1>
+        </div>
+        <h2>Specifications</h2>
+
+        <div class="spec-item">
+          <span class="label">Refresh rate</span>
+          <span class="value">144Hz = 144 frames per second</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Resolution</span>
+          <span class="value"
+            >3840×2160 (4K) → very sharp but needs powerful GPU</span
+          >
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Panel type</span>
+          <span class="value"
+            >IPS Best colors & viewing angles Slightly slower (but modern ones
+            are fast) VA Better contrast (deep blacks) Slight smearing in dark
+            scenes TN Fastest response Worse colors (mostly outdated now)</span
+          >
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Adaptive sync</span>
+          <span class="value">AMD FreeSync / NVIDIA G-Sync</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Input lag</span>
+          <span class="value">Usually very low on gaming monitors (<5ms)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Screen size & aspect ratio</span>
+          <span class="value">Ultrawide (34"+) → immersive gaming</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Connectivity</span>
+          <span class="value">DisplayPort (preferred for 144Hz+)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Cooling:</span>
+          <span class="value">N/A</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Battery:</span>
+          <span class="value">10 – 15 hours (depends on usage)</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">Ports:</span>
+          <span class="value">Regular ports</span>
+        </div>
+
+        <div class="spec-item">
+          <span class="label">OS:</span>
+          <span class="value">Windows 10</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

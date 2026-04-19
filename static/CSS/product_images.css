@@ -1,0 +1,71 @@
+body {
+    background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    box-shadow: 2px 2px 30px black;
+    height: 60px;
+
+
+}
+
+nav .brandName {
+    color: white;
+    font-size: 1.3rem;
+    margin-left: 20px;
+    text-shadow: 2px 2px 20px blue;
+
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-right: 50px;
+    text-shadow: 2px 2px 20px blue;
+    transition: all 0.3s ease-in-out;
+}
+
+section { 
+     display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center;     
+    gap: 20px;
+    min-height: 100vh;        
+    padding: 20px;
+}
+
+section img {
+    height: 400px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px white, -2px -2px 10px white;
+}
+
+
+.specs {
+    width: 100%;
+    max-width: 800px;
+    background: #111827;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, sans-serif;
+    box-shadow: 2px 2px 10px red, -2px -2px 10px blue;
+    text-align: justify;
+}

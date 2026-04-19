@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiwaTech / Top Picks🔥</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/secondPage.css') }}">
+</head>
+
+<body>
+
+    <header class="navBar">
+        <h1>DiwaTech</h1>
+        </div>
+        <nav>
+            <div class="choices">
+
+                <select id="category" name="category">
+                    <option disabled selected>Choose category</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="phone">Phone</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="gaming">Gaming Gear</option>
+                </select>
+
+                <select>
+                    <option disabled selected>Sort by Price</option>
+                    <option>Low to High</option>
+                    <option>High to Low</option>
+                    <option>Newest</option>
+                </select>
+            </div>
+            <a href="{{ url_for('main') }}">Home</a>
+            <a href="{{ url_for('product') }}">Products</a>
+            <a href="{{ url_for('deals') }}">Deals</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+    </header>
+
+    <section class="Description">
+        <h2>Latest Tech Gadgets</h2>
+        <p>Find the best laptops, phones, and accessories</p>
+    </section>
+
+    <h2 class="bestsellers">Top Gaming Picks🔥</h2>
+
+    <section class="products">
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/gaminglaptop.avif') }}" height="200px" alt="Laptop">
+            <h3>MSI Cyborg 15</h3>
+            <p>High performance for gaming and work</p>
+            <span>₱85,999</span>
+            <button id="addToCartButton" onclick="showHowMany('p1')">Add to Cart</button>
+            <div class="quantity">
+                <div class="howMany" id="howMany1" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty1')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty1">
+                    <button class="minosCartNum" onclick="plus('qty1')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/gamingphone.jpg') }}" height="200px" alt="Phone">
+
+            <h3> Asus ROG Phone</h3>
+            <p>Latest Android flagship <br> phone</p>
+            <span>₱35,000</span>
+            <button id="addToCartButton" onclick="showHowMany('p2')">Add to Cart</button>
+            <div class="quantity">
+                <div class="howMany" id="howMany2" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty2')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty2">
+                    <button class="minosCartNum" onclick="plus('qty2')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/wirelessheadphone.jpg') }}" alt="Headphones" height="200px">
+            <h3>RGB Gaming Headphone</h3>
+            <p>Noise cancelling <br>headphones</p>
+            <span>₱5,000</span>
+            <button id="addToCartButton" onclick="showHowMany('p3')">Add to Cart</button>
+            <div class="quantity">
+                <div class="howMany" id="howMany3" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty3')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty3">
+                    <button class="minosCartNum" onclick="plus('qty3')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/smartwatch.jpg') }}" height="200px" alt="Smartwatch">
+            <h3>Garmin Venu Smartwatch</h3>
+            <p>Track your fitness <br> and health</p>
+            <span>₱8,500</span>
+            <button id="addToCartButton" onclick="showHowMany('p4')">Add to Cart</button>
+
+            <div class="quantity">
+                <div class="howMany" id="howMany4" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty4')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty4">
+                    <button class="minosCartNum" onclick="plus('qty4')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/gamingChair.jpg') }}" height="200px" alt="Gaming Chair">
+            <h3>ROG Gaming Chair</h3>
+            <p>Stability and<br> more comfortable</p>
+            <span>₱20,000</span>
+            <button id="addToCartButton" onclick="showHowMany('p5')">Add to Cart</button>
+            <div class="quantity">
+                <div class="howMany" id="howMany5" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty5')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty5">
+                    <button class="minosCartNum" onclick="plus('qty5')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/gamingkeyboard.avif') }}" height="200px" alt="Gaming Keyboard">
+            <h3>ROG Gaming Keyboard</h3>
+            <p>Pro Accuracy / <br> Rapid Response </p>
+            <span>₱7,500</span>
+            <button id="addToCartButton" onclick="showHowMany('p6')">Add to Cart</button>
+
+            <div class="quantity">
+                <div class="howMany" id="howMany6" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty6')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty6">
+                    <button class="minosCartNum" onclick="plus('qty6')">+</button>
+                    <button>Add</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/gamingmouse.jpg') }}" height="200px" alt="Gaming Mouse">
+            <h3>ROG Gaming Mouse</h3>
+            <p>Precision <br> that dominates</p>
+            <span>₱4,000</span>
+            <button id="addToCartButton" onclick="showHowMany('p7')">Add to Cart</button>
+            <div class="quantity">
+                <div class="howMany" id="howMany7" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty7')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty7">
+                    <button class="minosCartNum" onclick="plus('qty7')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/gamingcontroller.avif') }}" height="200px" alt="Gaming Controller">
+            <h3>Gaming Controller</h3>
+            <p>Play your way <br> Rule the game </p>
+            <span>₱6,000</span>
+            <button id="addToCartButton" onclick="showHowMany('p8')">Add to Cart</button>
+
+            <div class="quantity">
+                <div class="howMany" id="howMany8" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty8')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty8">
+                    <button class="minosCartNum" onclick="plus('qty8')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/gamingmonitor.jpg') }}" height="200px" alt="Gaming Monitor">
+            <h3>ROG Gaming Monitor</h3>
+            <p>See it first <br> Strike first </p>
+            <span>₱21,500</span>
+            <button id="addToCartButton" onclick="showHowMany('p9')">Add to Cart</button>
+
+            <div class="quantity">
+                <div class="howMany" id="howMany9" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty9')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty9">
+                    <button class="minosCartNum" onclick="plus('qty9')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/mousepad.jpg') }}" height="220px" alt="Gaming Mousepad">
+            <h3>ROG Mousepad</h3>
+            <p>Smooth moves <br> Bright plays </p>
+            <span>₱1,000</span>
+            <button id="addToCartButton" onclick="showHowMany('p10')">Add to Cart</button>
+
+            <div class="quantity">
+                <div class="howMany" id="howMany10" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty10')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty10">
+                    <button class="minosCartNum" onclick="plus('qty10')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="{{ url_for('static', filename='IMAGES_VIDEOS/soomfoncam.jpg') }}" height="200px" alt="WEBCAM">
+            <h3>Soomfon <br>Webcam</h3>
+            <p>Stream <br>like a pro </p>
+            <span>₱3,000</span>
+            <button id="addToCartButton" onclick="showHowMany('p11')">Add to Cart</button>
+
+            <div class="quantity">
+                <div class="howMany" id="howMany11" style="display: none;">
+                    <button class="plusCartNum" onclick="minus('qty11')">-</button>
+                    <input type="number" value="1" min="1" max="20" id="qty11">
+                    <button class="minosCartNum" onclick="plus('qty11')">+</button>
+                    <button>Add</button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="{{ url_for('static', filename="JAVASCRIPT/secondPage.js") }}"></script>
+</body>0
+
+</html>
