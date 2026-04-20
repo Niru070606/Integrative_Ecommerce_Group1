@@ -201,9 +201,13 @@ span {
 }
 
 .quantity {
+  align-self: flex;
+  justify-content: right;
   margin-left: 45px;
   margin-top: 10px;
   border-radius: 10px;
+
+
 }
 
 .quantity button {
