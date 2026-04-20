@@ -56,3 +56,31 @@ setInterval(function () {
         days + "d " + hours + "h " + minutes + "m " + seconds + "s";
 
 }, 1000);
+
+
+function foldQuantity(showWho){
+  if (showWho == "p1") {
+    document.getElementById("howMany1").style.display = "none";
+  } else if (showWho == "p2") {
+    document.getElementById("howMany2").style.display = "none";
+  } else if (showWho == "p3") {
+    document.getElementById("howMany3").style.display = "none";
+  } else if (showWho == "p4") {
+    document.getElementById("howMany4").style.display = "none";
+  } else if (showWho == "p5") {
+    document.getElementById("howMany5").style.display = "none";
+  } else if (showWho == "p6") {
+    document.getElementById("howMany6").style.display = "none";
+  } else if (showWho == "p7") {
+    document.getElementById("howMany7").style.display = "none";
+  } else if (showWho == "p8") {
+    document.getElementById("howMany8").style.display = "none";
+  } else if (showWho == "p9") {
+    document.getElementById("howMany9").style.display = "none";
+  } else if (showWho == "p10") {
+    document.getElementById("howMany10").style.display = "none";
+  } else if (showWho == "p11") {
+    document.getElementById("howMany11").style.display = "none";
+  }
+}
+  
