@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    {% endblock %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/product_images.css') }}"
+    />
+</head>
+<body>
+    {% include 'includes/productHeader.html'   %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% include 'includes/mainFooter.html'   %}
+</body>
+</html>

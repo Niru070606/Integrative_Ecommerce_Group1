@@ -1,0 +1,88 @@
+{% extends 'baseProduct.html' %} {% block title %}
+<title>ULTRA SLIM BUSINESS LAPTOP</title>
+{% endblock %}
+
+<main>
+  {% block content %}
+  <section>
+    <div></div>
+    <img
+      src="{{ url_for('static', filename='PRODUCT_IMAGES/ultraslimlaptop.jpg') }}"
+      alt="Ultra Slim Business Laptop"
+    />
+    <div class="specs">
+      <div>
+        <h1>ULTRA SLIM BUSINESS LAPTOP</h1>
+      </div>
+      <h2>Specifications</h2>
+
+      <div class="spec-item">
+        <span class="label">GPU:</span>
+        <span class="value"
+          >Integrated Intel Iris Xe / Intel Arc / AMD Radeon Graphics</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Architecture:</span>
+        <span class="value">Ada Lovelace</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">CPU:</span>
+        <span class="value"
+          >Intel Core i5 / i7 (13th–14th Gen) or AMD Ryzen 5 / Ryzen 7
+          (7000–8000 Series)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">RAM:</span>
+        <span class="value"
+          >8GB – 16GB LPDDR5 / DDR5 (up to 32GB in premium models)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Storage:</span>
+        <span class="value"
+          >256GB – 1TB NVMe SSD (fast boot + fast file access)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Display:</span>
+        <span class="value">Full HD (1920×1080) or QHD / 2.8K OLED</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Refresh Rate:</span>
+        <span class="value">144Hz – 165Hz</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Cooling:</span>
+        <span class="value">Silent / efficient single or dual fan</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Battery:</span>
+        <span class="value">10 – 20 hours (depends on usage)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Ports:</span>
+        <span class="value"
+          >USB-C (Thunderbolt on Intel models), HDMI, USB-A 3.2, MicroSD
+          slot</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">OS:</span>
+        <span class="value">Windows 11/Pro</span>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+</main>

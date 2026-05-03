@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deals - DiwaTech</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/deals.css') }}"
+    />
+  </head>
+
+  <body>
+    <header class="navBar">
+      <h1>DiwaTech</h1>
+      <nav>
+        <a href="{{ url_for('main') }}">Home</a>
+        <a href="{{ url_for('product') }}">Products</a>
+        <a href="{{ url_for('contact') }}">Contact</a>
+      </nav>
+    </header>
+    <main>
+    <section class="deals">
+      <h1>Hot Deals</h1>
+      <p>Limited time offers on gaming & tech gear!</p>
+
+      <div class="deals-container">
+        <div class="deal-card">
+          <h3>RGB Gaming Keyboard</h3>
+          <p class="old-price">₱7,500</p>
+          <p class="new-price">₱2,999</p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="deal-card">
+          <h3>Gaming Headset</h3>
+          <p class="old-price">₱5,000</p>
+          <p class="new-price">₱3,599</p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="deal-card">
+          <h3>Wireless Mouse</h3>
+          <p class="old-price">₱4,000</p>
+          <p class="new-price">₱1,999</p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="deal-card">
+          <h3>Gaming Chair</h3>
+          <p class="old-price">₱20,000</p>
+          <p class="new-price">₱16,999</p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="deal-card">
+          <h3>Gaming Phone</h3>
+          <p class="old-price">₱35,000</p>
+          <p class="new-price">₱29,000</p>
+          <button>Buy Now</button>
+        </div>
+
+        <div class="deal-card">
+          <h3>Smart Watch</h3>
+          <p class="old-price">₱8,500</p>
+          <p class="new-price">₱5,999</p>
+          <button>Buy Now</button>
+        </div>
+      </div>
+    </section>
+    </main>
+
+    {% include "includes/mainFooter.html" %}
+
+  </body>
+</html>

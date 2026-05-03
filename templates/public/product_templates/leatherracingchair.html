@@ -1,0 +1,77 @@
+{% extends 'baseProduct.html' %} {% block title %}
+<title>LEATHER RACING CHAIR</title>
+{% endblock %}
+
+<main>
+  {% block content %}
+  <section>
+    <div></div>
+    <img
+      src="{{ url_for('static', filename='PRODUCT_IMAGES/leatherchair.avif') }}"
+      alt="Leather Racing Chair"
+    />
+    <div class="specs">
+      <div>
+        <h1>LEATHER RACING CHAIR</h1>
+      </div>
+      <h2>Specifications</h2>
+
+      <div class="spec-item">
+        <span class="label">Design Style</span>
+        <span class="value">Inspired by race car seats (bucket-style)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Material</span>
+        <span class="value">aux leather finish with stitched panels</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Comfort & Padding</span>
+        <span class="value">Segmented padding (seat + backrest zones)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Movement & Adjustability</span>
+        <span class="value"
+          >Recline angle: ~90° to 115° (budget) / up to 135°+ (mid/high
+          range)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Frame & Build Quality</span>
+        <span class="value"
+          >Base: reinforced metal or heavy-duty wood frame Weight
+          capacity:</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Backrest Design</span>
+        <span class="value"
+          >Tilt-follow mechanism (back moves smoothly with body)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Material Options</span>
+        <span class="value">PU leather (common, stylish, easy to clean)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Movement Features</span>
+        <span class="value">360° swivel base (optional in some models)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Size & Space Requirements</span>
+        <span class="value"
+          >Clearance needed behind chair: 20–50 cm (depends on recline
+          type)</span
+        >
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+</main>
