@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DiwaTech.com</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='CSS/main.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <video
+        autoplay
+        loop
+        muted
+        plays-inline
+        preload="auto"
+        controls
+        class="bg-video"
+      >
+        <source
+          src="{{ url_for('static', filename='IMAGES_VIDEOS/diwatechbg.mp4') }}"
+          type="video/mp4"
+        />
+      </video>
+      <samp></samp>
+      <nav>
+        <h3 class="brandName">DiwaTech</h3>
+        <ul>
+          <li><a class="categories" href="#">Categories</a></li>
+          <li><a class="arrivals" href="#">New Arrivals</a></li>
+          <li><a class="sale" href="#">About</a></li>
+          <li><a class="about" href="#">Help/Support</a></li>
+        </ul>
+      </nav>
+
+      <div class="content">
+        <h1>Gadgets You’ll Love.</h1>
+        <a class="button" href="{{ url_for('secondPage') }}">Shop now</a>
+      </div>
+
+      <div class="countdown-container">
+        <h2>⏳Power Launch in:</h2>
+        <div class="countdown">
+          <div>
+            <span id="days">00</span>
+            <p>Days</p>
+          </div>
+          <div>
+            <span id="hours">00</span>
+            <p>Hours</p>
+          </div>
+          <div>
+            <span id="minutes">00</span>
+            <p>Minutes</p>
+          </div>
+          <div>
+            <span id="seconds">00</span>
+            <p>Seconds</p>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <p>© 2026 DiwaTech. All rights reserved.</p>
+      </footer>
+      
+    </div>
+    <script src="{{ url_for('static', filename='JAVASCRIPT/main.js') }}"></script>
+  </body>
+</html>

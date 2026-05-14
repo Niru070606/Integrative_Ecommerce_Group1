@@ -1,0 +1,83 @@
+{% extends 'baseProduct.html' %} {% block title %}
+<title>RTX 4060 GRAPHICS CARD</title>
+{% endblock %}
+
+<main>
+  {% block content %}
+  <section>
+    <div></div>
+    <img
+      src="{{ url_for('static', filename='PRODUCT_IMAGES/rtxgraphicscard.jpg') }}"
+      alt="RTX 4060 Graphics Card"
+    />
+    <div class="specs">
+      <div>
+        <h1>RTX 4060 GRAPHICS CARD</h1>
+      </div>
+      <h2>Specifications</h2>
+
+      <div class="spec-item">
+        <span class="label">GPU:</span>
+        <span class="value">AMD Ryzen 9 (best for heavy workloads)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Architecture:</span>
+        <span class="value">Ada Lovelace</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">CPU:</span>
+        <span class="value"
+          >Intel Core i7 13th Gen / AMD Ryzen 7 7000 Series</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">RAM:</span>
+        <span class="value">12GB–16GB VRAM</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Storage:</span>
+        <span class="value">Pro setup: 1TB + secondary SSD slot</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Display:</span>
+        <span class="value">100% DCI-P3 (ideal for color grading)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Refresh Rate:</span>
+        <span class="value">120Hz–240Hz</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Cooling:</span>
+        <span class="value"
+          >High sustained wattage (important for RTX GPUs)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Battery:</span>
+        <span class="value">80–99Wh</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Ports:</span>
+        <span class="value"
+          >USB-C / Thunderbolt 4 or USB4, HDMI 2.1 (for external monitors) SD /
+          microSD card reader (very useful), Multiple USB-A ports</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">OS:</span>
+        <span class="value">Windows 11/Pro</span>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+</main>

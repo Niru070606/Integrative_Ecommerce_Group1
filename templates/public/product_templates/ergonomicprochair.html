@@ -1,0 +1,79 @@
+{% extends 'baseProduct.html' %} {% block title %}
+<title>ERGONOMIC PRO CHAIR</title>
+{% endblock %}
+
+<main>
+  {% block content %}
+  <section>
+    <div></div>
+    <img
+      src="{{ url_for('static', filename='PRODUCT_IMAGES/ergonomicchair.jpg') }}"
+      alt="Ergonomic Pro Chair"
+    />
+    <div class="specs">
+      <div>
+        <h1>ERGONOMIC PRO CHAIR</h1>
+      </div>
+      <h2>Specifications</h2>
+
+      <div class="spec-item">
+        <span class="label">Ergonomic Adjustment System</span>
+        <span class="value"
+          >Seat height adjustment (gas lift system), Seat depth adjustment (to
+          support thigh length)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Lumbar Support (Lower Back System)</span>
+        <span class="value">3D lumbar support system (best category)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Seat Design & Comfort</span>
+        <span class="value"
+          >Waterfall seat edge (reduces pressure on thighs)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Armrests</span>
+        <span class="value">Breathable mesh or premium fabric</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Backrest Design</span>
+        <span class="value"
+          >Seat width: ~50–56 cm, Backrest height: ~80–90 cm, Chair height
+          range: adjustable 120–135 cm total height, Recommended height: 150 cm
+          – 190 cm</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Material & Breathability</span>
+        <span class="value">PU leather (premium look but less breathable)</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label"
+          >Class 3 or Class 4 gas lift (durability + safety)</span
+        >
+        <span class="value">N/A</span>
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Movement Features</span>
+        <span class="value"
+          >360° swivel, Smooth caster wheels (PU silent wheels)</span
+        >
+      </div>
+
+      <div class="spec-item">
+        <span class="label">Size & Fit Range</span>
+        <span class="value">Designed for long-hour use: 8–12 hours/day</span>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
+</main>

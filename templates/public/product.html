@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiwaTech / Products</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='CSS/product.css') }}">
+</head>
+
+<body>
+    <header class="navBar">
+        <h1>DiwaTech</h1>
+        </div>
+        <nav>
+            
+            <a href="{{ url_for('secondPage') }}">Back</a>
+            <a href="{{ url_for('main') }}">Home</a>
+            <a href="{{ url_for('deals') }}">Deals</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
+        </nav>
+        </div>
+    </header>
+
+    <main>
+    <section class="products">
+
+        <section class="products">
+
+            <h1>OUR PRODUCTS</h1>
+
+
+            <div class="product-section">
+                <h2> Laptops</h2>
+                <ul>
+                    <li> <a href="{{ url_for('product_detail', filename = 'laptop') }}">Gaming Laptop RTX 4060</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'ultraslimlaptop') }}">Ultra Slim Business Laptop</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'budgetlaptop') }}">Student Budget Laptop</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'laptop') }}">High Performance Creator Laptop</a></li>
+                </ul>
+            </div>
+
+
+            <div class="product-section">
+                <h2> Gaming Chairs</h2>
+                <ul>
+                    <li><a href="{{ url_for('product_detail', filename = 'rgbgamingchair') }}">RGB Gaming Chair</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'ergonomicprochair') }}">Ergonomic Pro Chair</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'recliningchair') }}">Reclining Comfort Chair</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'letherracingchair') }}">Leather Racing Chair</a></li>
+                </ul>
+            </div>
+
+
+            <div class="product-section">
+                <h2> Gaming Monitors</h2>
+                <ul>
+                    <li><a href="{{ url_for('product_detail', filename = '144hzmonitor') }}">144Hz Gaming Monitor</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'curvedmonitor') }}">240Hz Curved Monitor</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = '4kmonitor') }}">4K Ultra HD Monitor</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'ultrawidemonitor') }}">Ultra Wide Gaming Display</a></li>
+                </ul>
+            </div>
+
+
+            <div class="product-section">
+                <h2> Gaming Accessories</h2>
+                <ul>
+                    <li><a href="{{ url_for('product_detail', filename = 'rgbkeyboard') }}">RGB Mechanical Keyboard</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'wirelessgamingmouse') }}">Wireless Gaming Mouse</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'progamingheadset') }}">Pro Gaming Headset</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'rgbmousepad') }}">RGB Mousepad</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'gamecontroller') }}">Game Controller (Wireless)</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'joystickarcade') }}">Joystick Arcade Stick</a></li>
+                </ul>
+            </div>
+
+
+            <div class="product-section">
+                <h2> PC Parts</h2>
+                <ul>
+                    <li><a href="{{ url_for('product_detail', filename = 'rtx4060graphicscard') }}">RTX 4060 Graphics Card</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'ryzen7') }}">Ryzen 7 Processor</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'gamingmotherboard') }}">Gaming Motherboard</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = '1632GBRAM') }}">16GB / 32GB RAM Kit</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'SSD1TB') }}">SSD NVMe 1TB</a></li>
+                    <li><a href="{{ url_for('product_detail', filename = 'gamingpowersupply') }}">Gaming Power Supply</a></li>
+                </ul>
+            </div>
+        </section>
+        </main>
+
+        {% include "includes/mainFooter.html" %}
+</body>
+
+</html>
