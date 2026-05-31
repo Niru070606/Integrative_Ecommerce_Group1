@@ -234,3 +234,11 @@ span {
 
   }
 }
+
+.phyper{
+  color: inherit;
+  text-decoration: none;
+}
+.phyper :active{
+  color: inherit;
+}
