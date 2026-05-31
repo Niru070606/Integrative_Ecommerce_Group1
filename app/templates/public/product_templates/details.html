@@ -1,0 +1,26 @@
+{% extends 'baseProduct.html' %} {% block title %}
+<title>LEATHER RACING CHAIR</title>
+{% endblock %}
+
+<main>
+  {% block content %}
+  <section>
+    <img
+      src="{{ url_for('static', filename=product.file_path) }}"
+
+      alt="{{product.product_name}}"
+    />
+    <div class="specs">
+      <h1>{{ product.product_name }}</h1>
+      <h2>Specifications</h2>
+
+    <div class="spec-text">
+      {{ product.specification }}
+    </div>
+</div>
+
+      
+    </div>
+  </section>
+  {% endblock %}
+</main>

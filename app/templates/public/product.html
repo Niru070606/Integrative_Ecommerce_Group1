@@ -17,10 +17,10 @@
         </div>
         <nav>
             
-            <a href="{{ url_for('secondPage') }}">Back</a>
-            <a href="{{ url_for('main') }}">Home</a>
-            <a href="{{ url_for('deals') }}">Deals</a>
-            <a href="{{ url_for('contact') }}">Contact</a>
+            <a href="{{ url_for('product.secondPage') }}">Back</a>
+            <a href="{{ url_for('product.main') }}">Home</a>
+            <a href="{{ url_for('product.deals') }}">Deals</a>
+            <a href="{{ url_for('product.contact') }}">Contact</a>
         </nav>
         </div>
     </header>
@@ -36,8 +36,11 @@
             <div class="product-section">
                 <h2> Laptops</h2>
                 <ul>
-                    <li> <a href="{{ url_for('product_detail', filename = 'laptop') }}">Gaming Laptop RTX 4060</a></li>
-                    <li><a href="{{ url_for('product_detail', filename = 'ultraslimlaptop') }}">Ultra Slim Business Laptop</a></li>
+                    <li> <a href="{{ url_for('product_detail', product_id=product.id) }}">Gaming Laptop RTX 4060</a></li>
+
+
+                    <li><a href="{{ url_for('product.product_detail', product_id=0) }}">Ultra Slim Business Laptop</a></li>
+
                     <li><a href="{{ url_for('product_detail', filename = 'budgetlaptop') }}">Student Budget Laptop</a></li>
                     <li><a href="{{ url_for('product_detail', filename = 'laptop') }}">High Performance Creator Laptop</a></li>
                 </ul>
