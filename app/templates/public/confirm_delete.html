@@ -1,0 +1,16 @@
+{% extends 'adminBase.html' %}
+{% block name %}
+    <title>Confirm Deletion</title>
+{% endblock %}
+    
+{% block content %}
+    <h1>Delete Students</h1>
+
+    <p>Are yu sure you wan't to delete <strong>{{product.product_name}}</strong></p>
+    <p>This action can't be undone.</p>
+
+    <form method="POST" action="{{ url_for('product.delete_product', product_id=product.id) }}">
+        <button type="submit">Yes, Delete it now</button>
+    </form>
+    <a href="{{ url_for('product.adminList' ) }}">Cancel</a>
+{% endblock %}

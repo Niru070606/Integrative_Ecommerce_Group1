@@ -1,0 +1,48 @@
+{% extends 'adminBase.html' %} 
+
+    {% block title %}
+    <title>Add Products</title>
+    {% endblock %}
+    
+  </head>
+  {% block content %}
+    <main>
+      <h2>Add Product</h2>
+
+      <!-- Flash messages -->
+      {% with messages = get_flashed_messages(with_categories=true) %} 
+      {% if messages %} 
+      {% for category, message in messages %}
+      <p><strong>{{ message }}</strong></p>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+
+      <!-- Create form -->
+      <form method="POST" action="{{ url_for('product.add_product') }}">
+        <label>Product Name:</label><br />
+        <input type="text" name="product_name" required /><br /><br />
+
+        <label>Product Description:</label><br />
+        <input type="text" name="product_details" required /><br /><br />
+
+        <label>Price:</label><br />
+        <input type="number" step="1" name="price" required /><br /><br />
+
+        <label>Category:</label><br />
+        <input type="text" name="category" required /><br /><br />
+
+        <label>Stocks:</label><br />
+        <input type="number" step="1" name="stocks" required /><br /><br />
+
+        <label>File Path:</label><br />
+        <input type="text" name="file_path" required /><br /><br />
+
+        <label>Specification:</label><br />
+        <input type="text" name="specification" required /><br /><br />
+
+        <button type="submit">Save Product</button>
+        <a href="{{ url_for('product.adminList') }}">Cancel</a>
+      </form>
+    </main>
+  {% endblock %}

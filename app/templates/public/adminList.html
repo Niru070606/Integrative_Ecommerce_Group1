@@ -1,0 +1,63 @@
+{% extends 'adminBase.html' %} 
+<!doctype html>
+    {% block title %}
+      <title>Admin List</title>
+    {% endblock %}
+    
+    
+  
+    {% block content %}
+    <main>
+      <h2>Product List</h2>
+      <br />
+      <section class="productTable">
+        <table>
+          <thead>
+            <tr>
+              <th>Product ID</th>
+              <th>Product Name</th>
+              <th>Product Details</th>
+              <th>Price</th>
+              <th>Category</th>
+              <th>Stocks</th>
+              <th>File Name</th>
+              <th>Full Specification</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for product in products %}
+            <tr>
+              <td>{{ product.id }}</td>
+              <td>{{ product.product_name }}</td>
+              <td>{{ product.product_description }}</td>
+
+              <td>{{ product.price }}</td>
+              <td>{{ product.category }}</td>
+              <td>{{ product.stocks }}</td>
+              <td>{{ product.file_path }}</td>
+              <td>{{ product.specification }}</td>
+              <td>
+                <a
+                  href="{{ url_for('product.edit_product', product_id=product.id ) }}"
+                >
+                  <button>Edit</button>
+                </a>
+              </td>
+              <td>
+                <a href="{{ url_for('product.delete_product', product_id=product.id ) }}">
+                  <button>Delete</button>
+                </a>
+              </td>
+            </tr>
+
+            {% endfor %}
+          </tbody>
+        </table>
+      </section>
+      <br />
+
+      <a href="{{ url_for('product.add_product' ) }}">
+      <button class="addbutton">+</button>
+      </a>
+    </main>
+{% endblock %}
