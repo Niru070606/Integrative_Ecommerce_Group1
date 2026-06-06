@@ -12,6 +12,9 @@ def create_app():
         'mysql+pymysql://root:@localhost/product_information'
         app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+        # Needed for Flask `flash()` and sessions
+        app.config['SECRET_KEY'] = 'dev-secret-key-change-me'
+
         db.init_app(app)
         migrate.init_app(app, db)
 

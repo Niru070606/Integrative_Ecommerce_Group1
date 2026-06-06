@@ -1,0 +1,235 @@
+/* Admin UI theme (dark + teal accent) */
+
+:root {
+  --bg: #111827;
+  --surface: #0b0f19;
+  --surface-2: #111;
+  --text: #ffffff;
+  --muted-border: rgba(255, 255, 255, 0.12);
+  --muted-border-2: rgba(255, 255, 255, 0.08);
+  --row-alt: rgba(255, 255, 255, 0.03);
+  --thead-bg: rgba(255, 255, 255, 0.06);
+  --accent: #00bcd4;
+  --accent-hover-bg: #00bcd4;
+  --danger: #7f1d1d;
+  --danger-hover: #ef4444;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 16px 60px;
+}
+
+h1,
+h2 {
+  margin: 0 0 18px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Links */
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--accent);
+}
+
+a:focus-visible {
+  outline: 2px solid rgba(0, 188, 212, 0.7);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+/* Inputs + buttons */
+button,
+input {
+  font-family: inherit;
+}
+
+button {
+  background: var(--surface-2);
+  color: var(--text);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+button:hover {
+  background: var(--accent-hover-bg);
+  color: #000;
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 2px solid rgba(0, 188, 212, 0.7);
+  outline-offset: 2px;
+}
+
+/* Forms */
+form {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--muted-border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 12px;
+}
+
+label {
+  display: block;
+  font-weight: 700;
+  margin: 12px 0 6px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 0 12px;
+  border-radius: 10px;
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text);
+  outline: none;
+  transition: 0.15s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: rgba(0, 188, 212, 0.8);
+  box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.18);
+}
+
+input[type="text"]::placeholder,
+input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Default layout for form actions */
+form > button {
+  margin-top: 16px;
+}
+
+/* Admin table */
+section.productTable {
+  overflow-x: auto;
+}
+
+section.productTable table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+section.productTable thead th {
+  background: var(--thead-bg);
+  color: var(--text);
+  text-align: left;
+  padding: 12px;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+section.productTable tbody td {
+  padding: 12px;
+  border-bottom: 1px solid var(--muted-border-2);
+  vertical-align: top;
+}
+
+section.productTable tbody tr:nth-child(even) {
+  background: var(--row-alt);
+}
+
+section.productTable tbody tr:hover {
+  background: rgba(0, 188, 212, 0.12);
+}
+
+/* Buttons inside table cells */
+section.productTable td button {
+  padding: 8px 12px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+/* Delete confirmation destructive style */
+/* Template uses: <form ...><button type="submit">Yes, Delete it now</button></form> */
+form button[type="submit"] {
+  /* default is already non-destructive teal on hover; override below for delete */
+}
+
+/* Narrow heuristic: only the delete page has a single submit button and uses h1 Delete Students */
+/* We can't rely on page-specific classes, so keep rule low-risk by targeting the h1 context via :has(). */
+
+@supports selector(:has(*)) {
+  h1:has(+ p) ~ form button[type="submit"],
+  h1:has(+ p) form button[type="submit"] {
+    background: var(--danger);
+    color: #fff;
+  }
+
+  h1:has(+ p) ~ form button[type="submit"]:hover,
+  h1:has(+ p) form button[type="submit"]:hover {
+    background: var(--danger-hover);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+}
+
+/* Fallback: style the first submit button inside any form following an h1 with delete wording */
+h1 {
+  /* no-op placeholder for cascade */
+}
+
+/* Responsive tweaks */
+@media (max-width: 720px) {
+  main {
+    padding: 22px 12px 50px;
+  }
+
+  form {
+    padding: 16px;
+  }
+
+  form > button {
+    width: 100%;
+  }
+}
+
+.addbutton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 12px 20px;
+    background-color: #00ffff;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
