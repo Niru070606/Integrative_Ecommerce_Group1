@@ -91,30 +91,42 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* Forms */
+/* Forms (admin UI) */
 form {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--muted-border);
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 12px;
+  border-radius: 16px;
+  padding: 18px;
+  margin-top: 16px;
+  max-width: 840px;
+  width: 100%;
+
+  /* keep form from inheriting table-like alignment */
+  display: block;
+
+  /* subtle depth */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
 
+/* Wrap label + input pairing; add this in CSS only (works even without HTML changes) */
 label {
   display: block;
   font-weight: 700;
-  margin: 12px 0 6px;
+  margin: 14px 0 8px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.95rem;
+  letter-spacing: 0.1px;
 }
 
 input[type="text"],
 input[type="number"] {
   width: 100%;
   box-sizing: border-box;
-  height: 40px;
-  padding: 0 12px;
-  border-radius: 10px;
-  background: var(--surface);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  background: rgba(11, 15, 25, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   color: var(--text);
   outline: none;
   transition: 0.15s ease;
@@ -122,18 +134,90 @@ input[type="number"] {
 
 input[type="text"]:focus,
 input[type="number"]:focus {
-  border-color: rgba(0, 188, 212, 0.8);
+  border-color: rgba(0, 188, 212, 0.85);
   box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.18);
 }
 
 input[type="text"]::placeholder,
 input[type="number"]::placeholder {
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* Cleaner spacing for input groups */
+form br {
+  display: none;
+}
+
+/* Two-column grid on larger screens */
+@media (min-width: 840px) {
+  form {
+    padding: 22px;
+  }
+
+  /* Each label/input pair takes a grid cell */
+  form > label,
+  form > input {
+    width: 100%;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18px;
+  }
+
+  /* Put action buttons on full width row */
+  form > button,
+  form > a {
+    grid-column: 1 / -1;
+  }
+
+  /* Make the form feel balanced: start each input group on a new row */
+  /* (Since the HTML has label + input + <br>, we use the natural DOM order.) */
+  form > label {
+    align-self: center;
+  }
 }
 
 /* Default layout for form actions */
 form > button {
   margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: rgba(0, 188, 212, 0.12);
+  border: 1px solid rgba(0, 188, 212, 0.35);
+  color: var(--text);
+  transition: 0.18s ease;
+}
+
+form > button:hover {
+  background: rgba(0, 188, 212, 0.35);
+  color: #001014;
+  transform: translateY(-1px);
+}
+
+form > a {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border-radius: 12px;
+  border: 1px solid var(--muted-border);
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.03);
+  text-decoration: none;
+}
+
+form > a:hover {
+  border-color: rgba(0, 188, 212, 0.5);
+  color: #ffffff;
+  background: rgba(0, 188, 212, 0.12);
 }
 
 /* Admin table */
@@ -222,16 +306,16 @@ h1 {
 }
 
 .addbutton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 12px 20px;
-    background-color: #00ffff;
-    color: black;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background-color: #00ffff;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 nav {
@@ -250,17 +334,14 @@ nav {
   position: fixed;
   width: 100%;
   height: 40px;
-  
-
 }
 
 .navBar h1 {
   margin: 0;
   color: aqua;
   font-size: 30px;
-  font-family:'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
 }
-
 
 .navBar ul {
   display: flex;
@@ -268,17 +349,13 @@ nav {
   align-items: center;
   text-decoration: none;
   list-style: none;
-
-
 }
 
-
 .navBar ul li {
-  color: white; 
+  color: white;
   font-size: 22px;
   transition: 0.3s;
   padding: 5px 10px;
-
 }
 
 .navBar a:hover {
@@ -286,7 +363,6 @@ nav {
   transform: scale(1.1);
 }
 
-.navBar li a:active{
+.navBar li a:active {
   color: #00bcd4;
-  
 }
