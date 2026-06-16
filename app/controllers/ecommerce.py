@@ -1,9 +1,6 @@
-from flask import Blueprint,render_template, request, redirect, url_for, flash, current_app
+from flask import Blueprint,render_template, request, redirect, url_for, flash
 from app.models.ecommerce import Ecommerce
 from app import db
-import os
-from werkzeug.utils import secure_filename
-
 
 product_bp = Blueprint('product',__name__)
 
@@ -50,23 +47,7 @@ def edit_product(product_id):
     if request.method == 'POST':
         product_name = request.form.get('product_name')
         product_description = request.form.get('product_details')
-        file = request.files.get('file_path')
-
-        if file and file.filename:
-            filename = secure_filename(file.filename)
-
-            upload_folder = os.path.join(
-                current_app.root_path,
-                'static',
-                'IMAGES_VIDEOS'
-            )
-
-            os.makedirs(upload_folder, exist_ok=True)
-
-            file.save(os.path.join(upload_folder, filename))
-
-            file_path = filename
-
+        file_path = request.form.get('file_path')
         price = request.form.get('price')
         category = request.form.get('category')
         stocks = request.form.get('stocks')
@@ -78,32 +59,12 @@ def edit_product(product_id):
         
         product.product_name = product_name
         product.product_description = product_description
-
-        image = request.files.get('file_path')
-
-        if not image or image.filename == '':
-            flash('No image selected', 'error')
-            return redirect(url_for('product.edit_product'))
-
-        filename = secure_filename(image.filename)
-
-        upload_folder = os.path.join(
-            current_app.root_path,
-            'static',
-            'IMAGES_VIDEOS'
-        )
-
-        os.makedirs(upload_folder, exist_ok=True)
-
-        image.save(os.path.join(upload_folder, filename))
-
-        file_path = filename
-
+        product.file_path = file_path
         product.price = price
         product.category = category
         product.stocks = stocks
         product.specification = specification
-        
+
         db.session.commit()
 
         flash('Succesfully edited the product', 'succes')
@@ -118,26 +79,7 @@ def add_product():
     if request.method == 'POST':
         product_name = request.form.get('product_name')
         product_description = request.form.get('product_details')
-        image = request.files.get('file_path')
-
-        if not image or image.filename == '':
-            flash('No image selected', 'error')
-            return redirect(url_for('product.edit_product'))
-
-        filename = secure_filename(image.filename)
-
-        upload_folder = os.path.join(
-            current_app.root_path,
-            'static',
-            'IMAGES_VIDEOS'
-        )
-
-        os.makedirs(upload_folder, exist_ok=True)
-
-        image.save(os.path.join(upload_folder, filename))
-
-        file_path = filename
-
+        file_path = request.form.get('file_path')
         price = request.form.get('price')
         category = request.form.get('category')
         stocks = request.form.get('stocks')
@@ -147,7 +89,7 @@ def add_product():
             flash('All fields required to be filled', 'error')
             return redirect(url_for('product.add_product'))
         
-        new_product = Ecommerce(product_name=product_name, product_description=product_description, file_path="IMAGE_VIDEOS/"+file_path, price=price, category=category, stocks=stocks, specification=specification)
+        new_product = Ecommerce(product_name=product_name, product_description=product_description, file_path=file_path, price=price, category=category, stocks=stocks, specification=specification)
         db.session.add(new_product)
         db.session.commit()
 
