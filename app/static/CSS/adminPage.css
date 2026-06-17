@@ -241,9 +241,19 @@ section.productTable thead th {
 }
 
 section.productTable tbody td {
-  padding: 12px;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--muted-border-2);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
   vertical-align: top;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+section.productTable tbody td:last-child {
+  border-right: none;
+}
+
+section.productTable tbody td a {
+  display: inline-flex;
 }
 
 section.productTable tbody tr:nth-child(even) {
