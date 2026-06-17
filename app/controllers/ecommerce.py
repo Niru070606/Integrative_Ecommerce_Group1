@@ -5,12 +5,12 @@ from app import db
 product_bp = Blueprint('product',__name__)
 
 @product_bp.route("/")
+def login():
+    return render_template('public/login.html')
+
+@product_bp.route("/home")
 def main():
     return render_template('public/main.html')
-
-@product_bp.route('/product')
-def product():
-    return render_template('public/product.html')
 
 @product_bp.route('/deals')
 def deals():
@@ -19,7 +19,6 @@ def deals():
 @product_bp.route('/contact')
 def contact():
     return render_template('public/contact.html')
-
 
 @product_bp.route('/secondPage')
 def secondPage():

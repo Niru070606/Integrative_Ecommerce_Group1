@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/login.css' ) }}">
+  </head>
+  <body>
+    <div class="login-box" role="region" aria-label="Login">
+      <h1 class="login-title">Login</h1>
+
+      <!-- No submit button: JS will handle on click -->
+      <form id="loginForm" novalidate>
+        <label for="username">Username</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="Enter your username"
+          required
+          autocomplete="username"
+        />
+
+        <label for="password">Password</label>
+        <input
+          id="password"
+          name="password"
+          type="password"
+          placeholder="Enter your password"
+          required
+          autocomplete="current-password"
+        />
+
+        <div class="actions">
+          <button type="button" class="login-btn" id="loginBtn" onclick="login()">Login</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="{{ url_for('static', filename="JAVASCRIPT/secondPage.js") }}">
+    </script>
+  </body>
+</html>

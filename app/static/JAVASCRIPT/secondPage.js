@@ -40,25 +40,22 @@ function minus(qtyId) {
   }
 }
 
-
 const targetDate = new Date("May 1, 2026 00:00:00").getTime();
 
 setInterval(function () {
-    const now = new Date().getTime();
-    const distance = targetDate - now;
+  const now = new Date().getTime();
+  const distance = targetDate - now;
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((distance / 1000 / 60) % 60);
-    const seconds = Math.floor((distance / 1000) % 60);
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((distance / 1000 / 60) % 60);
+  const seconds = Math.floor((distance / 1000) % 60);
 
-    document.getElementById("timer").innerHTML =
-        days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-
+  document.getElementById("timer").innerHTML =
+    days + "d " + hours + "h " + minutes + "m " + seconds + "s";
 }, 1000);
 
-
-function foldQuantity(showWho){
+function foldQuantity(showWho) {
   if (showWho == "1") {
     document.getElementById("1").style.display = "none";
   } else if (showWho == "2") {
@@ -83,4 +80,15 @@ function foldQuantity(showWho){
     document.getElementById("11").style.display = "none";
   }
 }
-  
+
+function login() {
+  let un = document.getElementById("username").value;
+  let pw = document.getElementById("password").value;
+  if (pw == "admin" && un == "admin") {
+    window.location.href = "/adminList";
+  } else if (pw == "user" && un == "user") {
+    window.location.href = "/home";
+  } else {
+    alert("Wrong Password");
+  }
+}
