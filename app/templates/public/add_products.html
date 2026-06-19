@@ -18,8 +18,9 @@
       {% endif %}
       {% endwith %}
 
-      <!-- Create form -->
-      <form method="POST" action="{{ url_for('product.add_product') }}">
+      <div class="modBox">
+
+      <form method="POST" action="{{ url_for('product.add_product') }}" >
         <label>Product Name:</label><br />
         <input type="text" name="product_name" required /><br /><br />
 
@@ -41,8 +42,9 @@
         <label>Specification:</label><br />
         <input type="text" name="specification" required /><br /><br />
 
-        <button type="submit">Save Product</button>
+        <button id="saveProductBtn" type="submit">Save Product</button>
         <a href="{{ url_for('product.adminList') }}">Cancel</a>
       </form>
+      </div>
     </main>
   {% endblock %}

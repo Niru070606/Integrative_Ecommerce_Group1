@@ -64,6 +64,9 @@ a:focus-visible {
   border-radius: 10px;
 }
 
+.cancel{
+  font-size: 3rem;
+}
 /* Inputs + buttons */
 button,
 input {
@@ -225,25 +228,33 @@ section.productTable {
   overflow-x: auto;
 }
 
-section.productTable table {
+section.productTable{
   width: 100%;
   border-collapse: collapse;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
 }
 
 section.productTable thead th {
-  background: var(--thead-bg);
-  color: var(--text);
+  background: linear-gradient(
+        180deg,
+        #ad00cf5a,
+        #008aadaa
+    );
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(61, 61, 61, 0.3);
   text-align: left;
   padding: 12px;
   font-weight: 800;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   white-space: nowrap;
+  
 }
 
 section.productTable tbody td {
   padding: 12px 14px;
-  border-bottom: 1px solid var(--muted-border-2);
-  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 3px solid rgba(92, 0, 205, 0.904);
+  border-right: 3px solid rgba(92, 0, 205, 0.904);
   vertical-align: top;
   background: rgba(255, 255, 255, 0.01);
 }
@@ -320,12 +331,29 @@ h1 {
   bottom: 20px;
   right: 20px;
   padding: 12px 20px;
-  background-color: #00ffff;
-  color: black;
+  background: linear-gradient(
+        180deg,
+        #ad00cf5a,
+        #008aadaa
+    );
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(61, 61, 61, 0.3);
   border: none;
-  border-radius: 8px;
+  border-radius: 8%;
   cursor: pointer;
   font-weight: bold;
+  width: 7rem;
+  height: 7rem;
+}
+
+.addbutton :hover{
+  background: linear-gradient(
+        180deg,
+        #ad00cf5a,
+        #008aadaa
+    );
+    color: white;
+    box-shadow: inset 0 1px 0 rgba(61, 61, 61, 0.3);
 }
 
 nav {
@@ -375,4 +403,11 @@ nav {
 
 .navBar li a:active {
   color: #00bcd4;
+}
+
+.modBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
 }

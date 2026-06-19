@@ -5,7 +5,7 @@
 {% endblock %}
 {% block content %}
     <main>
-      <h2>Add Product</h2>
+      <h2>Edit Product</h2>
 
       <!-- Flash messages -->
       {% with messages = get_flashed_messages(with_categories=true) %} 
@@ -16,7 +16,7 @@
       {% endif %}
       {% endwith %}
 
-      <!-- Create form -->
+      <div class="modBox">
       <form method="POST" action="{{ url_for('product.edit_product', product_id=product.id) }}">
         <label>Product Name:</label><br />
         <input type="text" name="product_name" required value="{{product.product_name}}"/><br /><br />
@@ -42,5 +42,6 @@
         <button type="submit">Save Product</button>
         <a href="{{ url_for('product.adminList')}}">Cancel</a>
       </form>
+      </div>
     </main>
 {% endblock %}
